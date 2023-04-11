@@ -4,15 +4,19 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import MainPage from './widget/main/main'
 import TopNavigation from './widget/nav/top'
+import { Routes, Route } from 'react-router-dom'
+import Card_List from './widget/card/card_list'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  
   return (
-    <div className="w-full flex flex-col bg-slate-0">
+    <div className="flex flex-col min-h-screen bg-slate-0">
       <TopNavigation />
-      <h1>Vite ++++ React</h1>
-      <MainPage />
+      <Routes>
+        <Route path='/' element={<MainPage></MainPage>}></Route>
+        <Route path='/cards' element={<Card_List />}></Route>
+      </Routes>
     </div>
   )
 }
