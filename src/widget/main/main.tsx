@@ -20,6 +20,7 @@ const MainPage = () => {
         <div className="p-2 m-auto container bg-slate-200">
             <h1>
                 메인페이지
+                <img src="kuriboh.png" alt="" />
             </h1>
             <div className="flex flex-row mobile:flex-col p-2">
                 {cardList.map((item, index) => 
